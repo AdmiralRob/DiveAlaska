@@ -43,6 +43,7 @@ if ( ! function_exists( 'scaffold_setup' ) ) :
 		register_nav_menus(
 			array(
 				'menu-1' => esc_html__( 'Primary Menu', 'scaffold' ),
+				'menu-upper' => esc_html__( 'Primary Upper Menu', 'scaffold' ),
 			)
 		);
 
@@ -129,6 +130,17 @@ function scaffold_widgets_init() {
 			'name'          => esc_html__( 'Sidebar', 'scaffold' ),
 			'id'            => 'sidebar-1',
 			'description'   => esc_html__( 'Add widgets here.', 'scaffold' ),
+			'before_widget' => '<section class="widget %2$s">',
+			'after_widget'  => '</section>',
+			'before_title'  => '<h3 class="widget-title">',
+			'after_title'   => '</h3>',
+		)
+	);
+	register_sidebar(
+		array(
+			'name'          => esc_html__( 'Footer', 'scaffold' ),
+			'id'            => 'footer',
+			'description'   => esc_html__( 'Add footer widgets here.', 'scaffold' ),
 			'before_widget' => '<section class="widget %2$s">',
 			'after_widget'  => '</section>',
 			'before_title'  => '<h3 class="widget-title">',

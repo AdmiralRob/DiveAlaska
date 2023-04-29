@@ -18,15 +18,9 @@
 
 	<footer class="site-footer">
 		<div class="wrapper">
-			<div class="site-info">
-
-				<?php
-				// translators: %1$s: theme name.
-				// translators: %2$s: theme author.
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'scaffold' ), '<a rel="nofollow" href="https://olympusthemes.com/themes/scaffold/">Scaffold</a>', 'Danny Cooper' );
-				?>
-
-			</div><!-- .site-info -->
+			<?php if ( is_active_sidebar( 'footer' ) ) {
+				dynamic_sidebar( 'footer' ); 
+			} ?>
 		</div><!-- .wrapper -->
 	</footer><!-- .site-footer -->
 

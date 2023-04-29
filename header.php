@@ -18,7 +18,7 @@
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="http://gmpg.org/xfn/11">
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton+Roboto">
 
 	<?php wp_head(); ?>
 </head>
@@ -28,11 +28,13 @@
 
 	<header class="site-header">
 		<div class="wrapper">
+			<?php get_template_part( 'template-parts/menu-upper' ); ?>
 			<?php get_template_part( 'template-parts/branding' ); ?>
 		</div><!-- .wrapper -->
 		
-		<?php get_template_part( 'template-parts/menu-1' ); ?>
 	</header><!-- .site-header -->
+
+	<?php get_template_part( 'template-parts/menu-1' ); ?>
 
 
 	<div class="site-content">
