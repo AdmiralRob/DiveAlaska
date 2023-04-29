@@ -56,33 +56,12 @@ function scaffold_brightness( $hex, $steps ) {
 	return sanitize_hex_color( $return );
 }
 
-/**
- * Output the Customizer CSS to wp_head
- */
-function scaffold_customizer_css() {
+// /**
+//  * Output the Customizer CSS to wp_head
+//  */
+// function scaffold_customizer_css() {
 
-	$bg_color = get_theme_mod( 'navigation-bg-color' );
-	?>
-	<style>
-		.menu-1 {
-			background-color: <?php echo sanitize_hex_color( $bg_color ); // WPCS: XSS ok. ?>;
-		}
-		.menu-1 li:hover, .menu-1 li.focus {
-			background-color: <?php echo scaffold_brightness( $bg_color, -25 ); // WPCS: XSS ok. ?>;
-		}
-		.menu-1 ul ul li {
-			background-color: <?php echo scaffold_brightness( $bg_color, -50 ); // WPCS: XSS ok. ?>;
-		}
-		.menu-1 .sub-menu li:hover {
-			background-color: <?php echo scaffold_brightness( $bg_color, -75 ); // WPCS: XSS ok. ?>;
-		}
-		.menu-toggle {
-			background-color: <?php echo sanitize_hex_color( $bg_color ); // WPCS: XSS ok. ?>;
-		}
-		.toggled .menu-toggle {
-			background-color: <?php echo scaffold_brightness( $bg_color, -50 ); // WPCS: XSS ok. ?>;
-		}
-	</style>
-	<?php
-}
-add_action( 'wp_head', 'scaffold_customizer_css' );
+// 	$bg_color = get_theme_mod( 'navigation-bg-color' );
+
+// }
+// add_action( 'wp_head', 'scaffold_customizer_css' );
