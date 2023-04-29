@@ -1,6 +1,6 @@
 <?php
 /**
- * The template for displaying all single pages
+ * The template for displaying the Front page.
  *
  * @link       https://developer.wordpress.org/themes/basics/template-hierarchy/#single-post
  *
@@ -20,7 +20,7 @@ get_header(); ?>
 			<button class='button'>Alaska Diving</button>
 			<button class='button'>Calendar</button>
 		</div>
-		
+
 		<div class="front-bar row">
 			<div class="col-md-4">
 				<h1>Dive Training</h1>
@@ -38,6 +38,7 @@ get_header(); ?>
 				<button class='button'>Learn More</button>
 			</div>
 		</div>
+
 		<div class="bottom-bar row">
 			<h1>Why Dive Alaska?</h1>
 			<p>Alaska has some of the best cold-water diving in the world! Get up close and personal with sea stars, anemones, rockfish, octopus, sea lions, and much more. Based in Anchorage, we mainly dive in Resurrection Bay and Prince William Sound, two p[ristine bodies of water teeming with life and bio-diversity. As a PADI, SSI, and GUE center, we're here to serve the scuba and freediving communities of Alaska with top-notch gear, training, guiding, and service. Let's go diving!</p>
