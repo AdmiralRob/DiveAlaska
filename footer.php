@@ -13,7 +13,6 @@
 
 ?>
 
-		</div><!-- .wrapper -->
 	</div><!-- .site-content -->
 
 	<footer class="site-footer">

@@ -617,7 +617,7 @@ a:active {
 --------------------------------------------------------------*/
 
 .wrapper {
-	max-width: 1040px;
+	max-width: 1200px;
 	margin-left: auto;
 	margin-right: auto;
 }
@@ -771,7 +771,6 @@ a:active {
 .menu-1 {
 	background-color: #213044;
 	font-size: 14px;
-	margin-bottom: 50px
 }
 
 .menu-1 {
@@ -1346,7 +1345,7 @@ object {
 
 }
 
-@media screen and (max-width: 1040px) {
+@media screen and (max-width: 1200px) {
 	.site-content,
 	.content-area,
 	.sidebar-1 {
@@ -1376,7 +1375,7 @@ h1,h2,h3,h4,h5,h6,#site-navigation a,button {font-family: 'Anton', sans-serif;te
 .site-header {color: white;padding: 0;background-color: #213044;min-height: 150px;text-align:left;}
 .site-header a {}
 
-.custom-logo {position:absolute;}
+.custom-logo {position:absolute;z-index:999;}
 
 #site-menu {float:right;}
 .menu-1 a {padding:10px; font-size:20px;}
@@ -1411,4 +1410,73 @@ li.button {
 	display:flex;
 	justify-content:space-between;
 }
+.white-text {
+	color:white;
+}
 
+/* FRONTPAGE CUSTOMIZATIONS */
+.front-video {
+	position: relative;
+	width: 100%;
+	height: 600px;
+	overflow: hidden;
+	text-align: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+video {
+	object-fit: cover;
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.front-video .wrapper {
+	position: relative;
+	z-index:999;
+}
+
+
+.front-bar {
+	background-color: #76cddf;
+	background-image: url(assets/waves.png);
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-attachment: fixed;
+	background-size: cover;
+	padding: 4rem 0;
+}
+.front-bar .wrapper {
+	display:flex;
+}
+.front-bar .col-md-4 {
+	text-align: center;
+	padding: 2rem;
+}
+.front-bar .boxxed {
+	background-color: #213044;
+	border-radius: 10px;
+	color: white;
+}
+.front-bar .boxxed h1 {
+	color: white;
+}
+
+
+.bottom-bar { 
+	background-image: url(assets/jelly.jpg);
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-attachment: fixed;
+	background-size: cover;
+	padding: 4rem;
+	margin-bottom: -25px;
+}
+.bottom-bar .wrapper {
+	background-color: rgba(0,0,0,0.75);
+	border-radius: 20px;
+	padding: 4em;
+	text-align:center;
+}
