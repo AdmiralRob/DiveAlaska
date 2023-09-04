@@ -46,9 +46,12 @@ Use it to make something cool, have fun, and share what you've learned with othe
 # Responsive
 --------------------------------------------------------------*/
 
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Roboto:wght@300;400&display=swap');
+
 /*--------------------------------------------------------------
 # Normalize
 --------------------------------------------------------------*/
+
 
 html {
 	font-family: 'Roboto',sans-serif;
@@ -254,11 +257,18 @@ optgroup {
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
+	border-width: 1px 0 0 1px;
+	border-style: solid;
+	border-color: #ccc;
 }
 
 td,
 th {
 	padding: 0;
+	border-width: 0 1px 1px 0;
+	border-style: solid;
+	border-color: #ccc;
+	padding: 8px;
 }
 
 /*--------------------------------------------------------------
@@ -266,11 +276,12 @@ th {
 --------------------------------------------------------------*/
 
 body {
-	color: #303135;
+	color: #4B4F58;
 	font-family: 'Roboto', sans-serif;
-	font-size: 16px;
+	font-size: 18px;
 	line-height: 1.6;
 	overflow-wrap: break-word;
+	font-weight:300;
 }
 
 nav,
@@ -286,10 +297,13 @@ h3,
 h4,
 h5,
 h6 {
-	font-family: 'Roboto', sans-serif;
+	font-family: 'Anton',sans-serif;
 	line-height: 1.25;
 	color: #2d2e33;
 }
+
+h2 { font-size: 3.3rem; color: #213044; margin: 0.3rem 0;}
+h3 { font-size: 1.3rem; color: #76cddf; margin: 0.3rem 0;}
 
 p {
 	margin: 0 0 1.5em;
@@ -436,10 +450,6 @@ table th {
 	text-align: left
 }
 
-table td {
-	padding: 10px 10px 0;
-}
-
 /*--------------------------------------------------------------
 # Forms
 --------------------------------------------------------------*/
@@ -532,7 +542,8 @@ textarea {
 --------------------------------------------------------------*/
 
 a {
-	color: #253e80;
+	color: #0170B9;
+	text-decoration: none;
 }
 
 a:hover,
@@ -623,13 +634,19 @@ a:active {
 }
 
 .site-content {
-	padding-bottom: 25px
+	padding-bottom: 25px;
+	background-image: url(assets/home-hero.jpg);
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-attachment: fixed;
+	background-size: cover;
+}
+.content-wrapper {
+	margin: 4rem auto;
+  max-width: 1200px;
 }
 
-.page-template-full-width .content-area,
-.post-template-full-width .content-area {
-	width: 100%;
-}
+
 
 /*--------------------------------------------------------------
 # Header
@@ -875,8 +892,12 @@ a:active {
 --------------------------------------------------------------*/
 
 .content-area {
-	width: 600px;
-	float: left;
+	display:flex;
+	background: #fff;
+	border-radius: 0 0 20px 20px;
+	padding: 40px 100px;
+}
+.inner-layer {
 }
 
 .post-thumbnail {
@@ -884,11 +905,18 @@ a:active {
 }
 
 .entry-header {
-	margin-bottom: 16px
+	padding: 2rem;
+	background: linear-gradient(rgba(25, 50, 75, 0.8), rgba(25, 50, 75, 0.8)), url(assets/jelly.jpg);
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+	text-align:center;
+	border-radius: 20px 20px 0 0;
 }
 
 .entry-title {
-	font-size: 30px;
+	font-size: 50px;
+	color: #fff;
 	margin: 0;
 }
 
@@ -1132,8 +1160,7 @@ a:active {
 --------------------------------------------------------------*/
 
 .sidebar-1 {
-	width: 300px;
-	float: right;
+	
 	font-size: 14px;
 }
 
@@ -1165,6 +1192,13 @@ a:active {
 	font-size: 14px;
 	text-align: right;
 }
+
+.site-footer .widget h2 {
+	margin-top: 2rem;
+	font-size: 1.3333333333333rem;
+	text-transform: none;
+}
+
 
 /*--------------------------------------------------------------
 # Infinite Scroll
@@ -1370,10 +1404,12 @@ object {
 .red {color:#de3734;}
 .aqua {color:#76cddf;}
 
-h1,h2,h3,h4,h5,h6,#site-navigation a,button {font-family: 'Anton', sans-serif;text-transform: uppercase;}
+h1,h2,h3,h4,h5,h6,#site-navigation a,button {font-family: 'Anton', sans-serif;text-transform: uppercase; font-weight: 400;}
 
 .site-header {color: white;padding: 0;background-color: #213044;min-height: 150px;text-align:left;}
-.site-header a {}
+.site-wrapper {display:flex; flex-direction:column;}
+.site-content {display:flex;}
+.home .site-content {flex-direction:column;}
 
 .custom-logo {position:absolute;z-index:999;}
 

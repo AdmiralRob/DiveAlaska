@@ -10,56 +10,42 @@
 
 get_header(); ?>
 
+<div class="content-wrapper">
+	<header class="entry-header">
+		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+	</header><!-- .entry-header -->
 	<div class="content-area">
+		<div class="inner-layer">
+			<?php 
+			while ( have_posts() ) :
+				the_post(); ?>
+					<article <?php post_class(); ?>>
+						<?php scaffold_thumbnail( 'scaffold-blog' ); 
+						
+						if ( get_edit_post_link() ) :
+							edit_post_link( esc_html__( '(Edit)', 'scaffold' ), '<p class="edit-link">', '</p>' );
+						endif;
+						?>
+						<div class="entry-content">
+							<?php
+							the_content();
+							wp_link_pages(
+								array(
+									'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'scaffold' ),
+									'after'  => '</div>',
+								)
+							);
+							?>
 
-		<?php
-		while ( have_posts() ) :
-			the_post();
+						</div><!-- .entry-content -->
+					</article><!-- #post-## -->
+				<?php 
+			endwhile; ?>
 
-			?>
-
-			<article <?php post_class(); ?>>
-
-				<?php scaffold_thumbnail( 'scaffold-full-width' ); ?>
-
-				<header class="entry-header">
-					<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
-				</header><!-- .entry-header -->
-
-				<?php
-				if ( get_edit_post_link() ) :
-
-					edit_post_link( esc_html__( '(Edit)', 'scaffold' ), '<p class="edit-link">', '</p>' );
-
-				endif;
-				?>
-
-				<div class="entry-content">
-					<?php
-					the_content();
-
-					wp_link_pages(
-						array(
-							'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'scaffold' ),
-							'after'  => '</div>',
-						)
-					);
-					?>
-				</div><!-- .entry-content -->
-
-			</article><!-- #post-## -->
-
-			<?php
-
-			// If comments are open or we have at least one comment, load up the comment template.
-			if ( comments_open() || get_comments_number() ) :
-				comments_template();
-			endif;
-
-		endwhile;
-		?>
-
+		</div><!-- .inner-layer -->
 	</div><!-- .content-area -->
+</div><!-- .content-wrapper -->
+
 
 <?php
 get_footer();

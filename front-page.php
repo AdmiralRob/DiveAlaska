@@ -12,14 +12,14 @@
 get_header(); ?>
 
 
-
 		<div class="front-video">
-			<video playsinline autoplay muted loop poster="cake.jpg">
-				<source src="<?php echo get_template_directory_uri(); ?>/assets/videobg.mp4" type="video/mp4">
-				Your browser does not support the video tag.
-			</video>
-	
-
+			<script type="text/javascript" src="https://unpkg.com/youtube-background/jquery.youtube-background.min.js"></script>
+			<div id="ytbg" data-youtube="https://www.youtube.com/watch?v=BF8fAR3gFzM"></div>
+			<script type="text/javascript">
+					jQuery(document).ready(function() {
+						jQuery('[data-youtube]').youtube_background();
+					});
+			</script>
 
 			<div class="wrapper">
 				<h1 class="white-text">World-Class Cold Water Diving</h1>
